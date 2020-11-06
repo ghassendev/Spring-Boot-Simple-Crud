@@ -4,12 +4,17 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+
+
 @Entity
 public class Arbre {
 @Id
 @GeneratedValue(strategy = GenerationType.IDENTITY)
 private Long idArbre;
 private String nomArbre;
+@ManyToOne
+private Categorie categorie;
 private Double prixArbre;
 private Date dateCreation;
 public Arbre() {
