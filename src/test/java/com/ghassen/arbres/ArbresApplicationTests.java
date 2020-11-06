@@ -11,6 +11,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 
 import com.ghassen.arbres.entities.Arbre;
+import com.ghassen.arbres.entities.Categorie;
 import com.ghassen.arbres.repos.ArbreRepository;
 @SpringBootTest
 class ArbresApplicationTests {
@@ -50,12 +51,76 @@ System.out.println(a);
 }
 }
 
+@Test
+public void testFindByNomProduit()
+{
+	List<Arbre> prods = arbreRepository.findByNomArbre("Citron");
+	for (Arbre p : prods)
+	{
+		System.out.println(p);
+	}
+}
+@Test
+public void testFindByNomProduitContains ()
+{
+	List<Arbre> prods=arbreRepository.findByNomArbreContains("Citron");
+	for (Arbre p : prods)
+	{
+		System.out.println(p);
+	} 
+}
 
 
+@Test
+	public void testfindByNomPrix()
+	{
+		List<Arbre> arbres = arbreRepository.findByNomPrix("Citron", 1000.0);
+		for (Arbre p : arbres)
+		{
+			System.out.println(p);
+		}
+	}
 
+	@Test
+	public void testfindByCategorie()
+	{
+		Categorie cat = new Categorie();
+		cat.setIdCat(1L);
+		List<Arbre> prods = arbreRepository.findByCategorie(cat);
+		for (Arbre p : prods)
+		{
+			System.out.println(p);
+		}
+	}
 
+	@Test
+	public void findByCategorieIdCat()
+	{
+	List<Arbre> prods = arbreRepository.findByCategorieIdCat(1L);
+	for (Arbre p : prods)
+	{
+		System.out.println(p);
+	}
+	}
+	@Test
+	public void testfindByOrderByNomProduitAsc()
+	{
+	List<Arbre> prods =arbreRepository.findByOrderByNomArbreAsc();
+	for (Arbre p : prods)
+	{
+	System.out.println(p);
+	}
+	}
 
-
+	@Test
+	public void testTrierProduitsNomsPrix()
+	{
+	List<Arbre> prods = arbreRepository.trierArbresNomsPrix();
+	for (Arbre p : prods)
+	{
+	System.out.println(p);
+	}
+	}
 
 
 

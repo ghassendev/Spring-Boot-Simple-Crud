@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.stereotype.Service;
 import  com.ghassen.arbres.entities.Arbre;
+import com.ghassen.arbres.entities.Categorie;
 import com.ghassen.arbres.repos.ArbreRepository;
 
 @Service
@@ -47,6 +48,48 @@ public class ArbreServiceImpl implements ArbreService{
 	public List<Arbre> getAllArbres() {
 		
 		return arbreRepository.findAll();
+	}
+
+	@Override
+	public List<Arbre> findByNomProduit(String nom) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Arbre> findByNomProduitContains(String nom) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Arbre> findByNomPrix(String nom, Double prix) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Arbre> findByCategorie(Categorie categorie) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Arbre> findByCategorieIdCat(Long id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Arbre> findByOrderByNomArbreAsc() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Arbre> trierArbresNomsPrix() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 	
 	

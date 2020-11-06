@@ -15,7 +15,7 @@ src="webjars/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 <meta http-equiv="Content-Type" content="text/html; charset=windows-1256">
 <title>Liste Arbres</title>
 </head>
-<body>
+<body class="bg-light">
 
 <div class="container">
 <jsp:include page="nav.jsp" />
