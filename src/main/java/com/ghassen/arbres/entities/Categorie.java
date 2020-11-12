@@ -26,7 +26,7 @@ private String descriptionCat;
 @JsonIgnore
 @OneToMany(mappedBy ="categorie")
 private List<Arbre> arbres;
-public Categorie() {}
+
 public Categorie(String nomCat, String descriptionCat, List<Arbre>arbres)
 {
 super();

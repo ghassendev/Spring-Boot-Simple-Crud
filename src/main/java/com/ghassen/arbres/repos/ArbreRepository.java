@@ -5,11 +5,12 @@ import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
 import com.ghassen.arbres.entities.Arbre;
 import com.ghassen.arbres.entities.Categorie;
 
-
+@RepositoryRestResource(path = "rest")
 public interface ArbreRepository extends JpaRepository<Arbre, Long> {
 
 	List<Arbre> findByNomArbre(String nom);
